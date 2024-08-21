@@ -44,7 +44,7 @@ file = 'words.txt'
 words = reading(file)
 
 results_dir = 'results'
-output_file = get_unique_filename(results_dir, 'wallets.txt')
+output_file = get_unique_filename(results_dir, 'names.txt')
 
 # Устанавливаем количество потоков в зависимости от числа ядер процессора
 max_workers = os.cpu_count()
