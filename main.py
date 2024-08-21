@@ -2,6 +2,7 @@ import random
 import os
 import concurrent.futures
 
+
 def get_unique_filename(directory: str, base_filename: str) -> str:
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -28,7 +29,7 @@ def generate_nick(words):
         components = selected_words + selected_numbers
         random.shuffle(components)
         nickname = ''.join(components)
-        if not nickname[0].isdigit() and len(nickname) > 7:
+        if not nickname[0].isdigit() and len(nickname) > 7 and len(nickname)<20:
             return nickname
 
 def generate_nicks_concurrently(words, number_of_nicks, max_workers=4):
